@@ -1,5 +1,5 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 
-#include "RollingPaintGameGameModeBase.h"
+#include "GameModes/RollingPaintGameGameModeBase.h"
 
