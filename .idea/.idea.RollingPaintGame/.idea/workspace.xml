@@ -9,13 +9,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2627f81e-a7c5-4a20-a0d5-917c5aeef623" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RollingPaintGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RollingPaintGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Characters/BP_PlayerPawn.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Characters/BP_PlayerPawn.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Maps/MainLevel.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/MainLevel.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/RollingPaintGame/Private/Characters/BasePawn.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RollingPaintGame/Private/Characters/BasePawn.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/RollingPaintGame/Private/Characters/Player/PlayerPawn.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RollingPaintGame/Private/Characters/Player/PlayerPawn.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/RollingPaintGame/Public/Characters/BasePawn.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RollingPaintGame/Public/Characters/BasePawn.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/RollingPaintGame/Public/Characters/Player/PlayerPawn.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RollingPaintGame/Public/Characters/Player/PlayerPawn.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/RollingPaintGame/Private/Characters/TargetPawn.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RollingPaintGame/Private/Characters/TargetPawn.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/RollingPaintGame/Public/Characters/TargetPawn.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RollingPaintGame/Public/Characters/TargetPawn.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +18,10 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
@@ -214,7 +213,7 @@
       <workItem from="1695673305846" duration="64000" />
       <workItem from="1695673482477" duration="14000" />
       <workItem from="1695673562687" duration="313000" />
-      <workItem from="1695674140059" duration="24675000" />
+      <workItem from="1695674140059" duration="26873000" />
     </task>
     <servers />
   </component>
@@ -223,21 +222,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Source/RollingPaintGame/Private/Characters/Player/PlayerPawn.cpp</url>
-          <line>38</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Source/RollingPaintGame/Private/Characters/BasePawn.cpp</url>
-          <line>33</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
