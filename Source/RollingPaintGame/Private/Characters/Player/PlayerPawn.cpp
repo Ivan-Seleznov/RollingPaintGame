@@ -5,7 +5,7 @@
 
 #include "EnhancedInputComponent.h"
 #include "Camera/CameraComponent.h"
-#include "Characters/TargetPawn.h"
+#include "..\..\..\Public\Characters\TargetPawn.h"
 #include "Characters/Player/Components/RollingSphereComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "GameFramework/SpringArmComponent.h"
@@ -40,12 +40,13 @@ void APlayerPawn::OnPawnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UP
 	FVector NormalImpulse, const FHitResult& Hit)
 {
 	Super::OnPawnHit(HitComp, OtherActor, OtherComp, NormalImpulse, Hit);
-	if (ATargetPawn* TargetPawn = Cast<ATargetPawn>(OtherActor))
+
+	ATargetPawn* TargetPawn = Cast<ATargetPawn>(OtherActor);
+	if (!TargetPawn) return;
+
+	if (TargetPawn->GetTargetState() == ESTATE_Clean)
 	{
-		if (TargetPawn->GetTargetState() == EROLE_Clean)
-		{
-			TargetPawn->SetMeshDynamicMaterialColor(GetCurrentPawnColor());
-			TargetPawn->SetTargetState(EROLE_Dirty);
-		}
+		TargetPawn->SetMeshDynamicMaterialColor(CurrentPawnColor);
+		TargetPawn->SetTargetState(ESTATE_Dirty);
 	}
 }

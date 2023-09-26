@@ -7,12 +7,6 @@
 #include "Characters/BasePawn.h"
 #include "Components/ShapeComponent.h"
 
-// Sets default values for this component's properties
-URollingSphereComponent::URollingSphereComponent()
-{
-
-}
-
 void URollingSphereComponent::InitializePlayerInput(UEnhancedInputComponent* InputComponent)
 {
 	if (!GetOwner() || !InputComponent) return;

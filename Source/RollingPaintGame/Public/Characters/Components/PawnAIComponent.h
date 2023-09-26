@@ -4,11 +4,13 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "PawnSimpleAiComponent.generated.h"
+#include "PawnAIComponent.generated.h"
 
-
+/*
+ Simple AI component for BasePawn
+ */
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class ROLLINGPAINTGAME_API UPawnSimpleAiComponent : public UActorComponent
+class ROLLINGPAINTGAME_API UPawnAIComponent : public UActorComponent
 {
 	GENERATED_BODY()
 

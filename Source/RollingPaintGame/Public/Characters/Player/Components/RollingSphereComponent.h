@@ -17,12 +17,8 @@ class ROLLINGPAINTGAME_API URollingSphereComponent : public UActorComponent
 	GENERATED_BODY()
 
 public:	
-	// Sets default values for this component's properties
-	URollingSphereComponent();
-
 	void InitializePlayerInput(UEnhancedInputComponent* InputComponent);
 
-	
 protected:
 	UPROPERTY(EditDefaultsOnly,Category="Input") UInputMappingContext* DefaultMappingContext;
 

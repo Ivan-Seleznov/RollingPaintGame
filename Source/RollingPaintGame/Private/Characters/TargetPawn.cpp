@@ -3,7 +3,8 @@
 
 #include "..\..\Public\Characters\TargetPawn.h"
 
-#include "Characters/Components/PawnSimpleAiComponent.h"
+#include "..\..\Public\Characters\Components\PawnAIComponent.h"
+#include "Characters/CleanerPawn.h"
 #include "Components/BoxComponent.h"
 
 ATargetPawn::ATargetPawn()
@@ -13,23 +14,29 @@ ATargetPawn::ATargetPawn()
 
 	PawnMesh->SetupAttachment(RootComponent);
 
-	SimpleAiComponent = CreateDefaultSubobject<UPawnSimpleAiComponent>("SimpleAIComponent");
+	SimpleAiComponent = CreateDefaultSubobject<UPawnAIComponent>("SimpleAIComponent");
 
 	
-	TargetState = EROLE_Clean;
+	TargetState = ESTATE_Clean;
+}
+
+void ATargetPawn::SetTargetState(ETargetState NewState)
+{
+	TargetState = NewState;
 }
 
 void ATargetPawn::OnPawnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp,
                             FVector NormalImpulse, const FHitResult& Hit)
 {
 	Super::OnPawnHit(HitComp, OtherActor, OtherComp, NormalImpulse, Hit);
-
+	
 	ATargetPawn* OtherTargetPawn = Cast<ATargetPawn>(OtherActor);
-	if (!OtherTargetPawn) return;
-
-	if (TargetState == EROLE_Dirty && OtherTargetPawn->GetTargetState() == ETargetState::EROLE_Clean)
+	if (!OtherTargetPawn || Cast<ACleanerPawn>(OtherTargetPawn)) return;
+	
+	if (TargetState == ESTATE_Dirty && OtherTargetPawn->TargetState == ESTATE_Clean)
 	{
-		OtherTargetPawn->SetMeshDynamicMaterialColor(GetCurrentPawnColor());
-		OtherTargetPawn->SetTargetState(EROLE_Dirty);
+		OtherTargetPawn->SetMeshDynamicMaterialColor(CurrentPawnColor);
+		OtherTargetPawn->TargetState = ESTATE_Dirty;
+		
 	}
 }

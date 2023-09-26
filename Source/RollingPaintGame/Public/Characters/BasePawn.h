@@ -9,10 +9,9 @@
 UENUM(BlueprintType)
 enum ETargetState
 {
-	EROLE_Clean  UMETA(DisplayName = "CleanPawn"),
-	EROLE_Dirty  UMETA(DisplayName = "DirtyPawn"),
+	ESTATE_Dirty		UMETA(DisplayName = "DirtyPawn"),
+	ESTATE_Clean		UMETA(DisplayName = "CleanPawn")
 };
-
 
 UCLASS(Abstract)
 class ROLLINGPAINTGAME_API ABasePawn : public APawn
@@ -49,12 +48,11 @@ protected:
 	UPROPERTY(EditDefaultsOnly,BlueprintReadOnly)
 	UMaterialInstance* MeshMaterial;
 	
-private:
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly,meta=(AllowPrivateAccess="true"))
-	FColor DefaultPawnColor;
-	
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly,meta=(AllowPrivateAccess="true"))
 	FColor CurrentPawnColor;
+private:
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly,meta=(AllowPrivateAccess="true"),Category="Color")
+	FColor DefaultPawnColor;
 	
 	UPROPERTY()
 	UMaterialInstanceDynamic* MeshDynamicMaterial;
