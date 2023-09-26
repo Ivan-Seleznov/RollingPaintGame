@@ -5,6 +5,7 @@
 
 #include "EnhancedInputComponent.h"
 #include "Camera/CameraComponent.h"
+#include "Characters/TargetPawn.h"
 #include "Characters/Player/Components/RollingSphereComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "GameFramework/SpringArmComponent.h"
@@ -32,5 +33,19 @@ void APlayerPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 	if (UEnhancedInputComponent* EnhancedInputComponent = Cast<UEnhancedInputComponent>(InputComponent))
 	{
 		RollingSphereComponent->InitializePlayerInput(EnhancedInputComponent);
+	}
+}
+
+void APlayerPawn::OnPawnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp,
+	FVector NormalImpulse, const FHitResult& Hit)
+{
+	Super::OnPawnHit(HitComp, OtherActor, OtherComp, NormalImpulse, Hit);
+	if (ATargetPawn* TargetPawn = Cast<ATargetPawn>(OtherActor))
+	{
+		if (TargetPawn->GetTargetState() == EROLE_Clean)
+		{
+			TargetPawn->SetMeshDynamicMaterialColor(GetCurrentPawnColor());
+			TargetPawn->SetTargetState(EROLE_Dirty);
+		}
 	}
 }
