@@ -9,20 +9,15 @@
   <component name="ChangeListManager">
     <list default="true" id="2627f81e-a7c5-4a20-a0d5-917c5aeef623" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RollingPaintGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RollingPaintGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/BP_RollingPaintGameModeBase.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/BP_RollingPaintGameMode.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BP_RollingPaintGameMode.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Characters/BP_PlayerPawn.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Characters/BP_PlayerPawn.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Maps/MainLevel.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/MainLevel.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/RollingPaintGame/Private/Characters/CleanerPawn.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RollingPaintGame/Private/Characters/CleanerPawn.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/RollingPaintGame/Private/Characters/Player/Components/RollingSphereComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RollingPaintGame/Private/Characters/Components/RollingSphereComponent.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/HUD/BP_GameHUD.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RollingPaintGame.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/RollingPaintGame.uproject" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/RollingPaintGame/Private/Characters/Components/PawnAIComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RollingPaintGame/Private/Characters/Components/PawnAIComponent.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/RollingPaintGame/Private/Characters/Player/PlayerPawn.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RollingPaintGame/Private/Characters/Player/PlayerPawn.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/RollingPaintGame/Private/Characters/TargetPawn.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RollingPaintGame/Private/Characters/TargetPawn.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/RollingPaintGame/Private/GameModes/RollingPaintGameGameModeBase.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/RollingPaintGame/Public/Characters/BasePawn.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RollingPaintGame/Public/Characters/BasePawn.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/RollingPaintGame/Public/Characters/Player/Components/RollingSphereComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RollingPaintGame/Public/Characters/Components/RollingSphereComponent.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/RollingPaintGame/Public/Characters/Player/PlayerPawn.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RollingPaintGame/Public/Characters/Player/PlayerPawn.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/RollingPaintGame/Public/Characters/TargetPawn.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RollingPaintGame/Public/Characters/TargetPawn.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/RollingPaintGame/Public/GameModes/RollingPaintGameGameModeBase.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/RollingPaintGame/Private/GameModes/RollingPaintGameMode.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RollingPaintGame/Private/GameModes/RollingPaintGameMode.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/RollingPaintGame/Public/Characters/Components/PawnAIComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RollingPaintGame/Public/Characters/Components/PawnAIComponent.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/RollingPaintGame/Public/GameModes/RollingPaintGameMode.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RollingPaintGame/Public/GameModes/RollingPaintGameMode.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +25,34 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
@@ -227,7 +250,7 @@
       <workItem from="1695673305846" duration="64000" />
       <workItem from="1695673482477" duration="14000" />
       <workItem from="1695673562687" duration="313000" />
-      <workItem from="1695674140059" duration="47014000" />
+      <workItem from="1695674140059" duration="53914000" />
     </task>
     <servers />
   </component>
@@ -236,5 +259,21 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Source/RollingPaintGame/Private/GameModes/RollingPaintGameMode.cpp</url>
+          <line>32</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Source/RollingPaintGame/Private/UI/CleanersCounterWidget.cpp</url>
+          <line>22</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

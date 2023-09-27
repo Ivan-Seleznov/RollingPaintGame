@@ -9,14 +9,20 @@
 
 void ARollingPaintGameMode::OnTargetPaint(const ATargetPawn* TargetPawn)
 {
-	CleanTargetsCount--;
-	if (Cast<ACleanerPawn>(TargetPawn)) CleanersCount--;
+	ChangeCleanTargetsCount(false);
+	if (Cast<ACleanerPawn>(TargetPawn))
+	{
+		ChangeCleanersCount(false);
+	}
 }
 
 void ARollingPaintGameMode::OnTargetCleaned(const ATargetPawn* TargetPawn)
 {
-	CleanTargetsCount++;
-	if (Cast<ACleanerPawn>(TargetPawn)) CleanersCount++;
+	ChangeCleanTargetsCount(true);
+	if (Cast<ACleanerPawn>(TargetPawn))
+	{
+		ChangeCleanTargetsCount(false);
+	}
 }
 
 void ARollingPaintGameMode::BeginPlay()
@@ -24,7 +30,30 @@ void ARollingPaintGameMode::BeginPlay()
 	Super::BeginPlay();
 
 	CleanersCount = GetAllCleaners();
+d	OnCleanersCountChanged.Broadcast(CleanersCount);
 	CleanTargetsCount = GetAllCleanTargets();
+
+	SetGameInputMode(true);
+}
+
+void ARollingPaintGameMode::ChangeCleanersCount(bool bIncrease)
+{
+	if (bIncrease) CleanersCount++;
+	else CleanersCount--;
+
+	OnCleanersCountChanged.Broadcast(CleanersCount);
+}
+
+void ARollingPaintGameMode::ChangeCleanTargetsCount(bool bIncrease)
+{
+	if (bIncrease) CleanTargetsCount++;
+	else CleanTargetsCount--;
+
+	if (CleanTargetsCount <= 0)
+	{
+		OnAllTargetsPainted.Broadcast();
+		SetGameInputMode(false);
+	}
 }
 
 int ARollingPaintGameMode::GetAllCleaners() const
@@ -41,4 +70,14 @@ int ARollingPaintGameMode::GetAllCleanTargets() const
 	UGameplayStatics::GetAllActorsOfClass(this,ATargetPawn::StaticClass(),Targets);
 
 	return Targets.Num();
+}
+
+void ARollingPaintGameMode::SetGameInputMode(bool bEnabled)
+{
+	APlayerController* PlayerController = UGameplayStatics::GetPlayerController(this,0);
+	if (!PlayerController) return;
+
+	bEnabled ? PlayerController->SetInputMode(FInputModeGameOnly()) : PlayerController->SetInputMode(FInputModeUIOnly());
+	
+	PlayerController->bShowMouseCursor = !bEnabled;
 }

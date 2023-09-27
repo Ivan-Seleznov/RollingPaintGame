@@ -19,7 +19,7 @@ protected:
 
 	UPROPERTY() FTimerHandle MoveTimerHandle;
 	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="SimpleAI") float MoveTimerRate = 1.f;
-	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="SimpleAI") float ImpulseStrength = 1000.f;
+	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="SimpleAI") float ImpulseStrength = 830.f;
 
 	void MoveRandomDirection();
 };

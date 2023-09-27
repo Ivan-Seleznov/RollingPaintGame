@@ -22,7 +22,7 @@ void UPawnAIComponent::MoveRandomDirection()
 	ABasePawn* OwnerPawn = Cast<ABasePawn>(GetOwner());
 	if (!OwnerPawn) return;
 	
-	const FVector MoveLocation = OwnerPawn->GetActorForwardVector() *
+	const FVector MoveLocation = /*OwnerPawn->GetActorForwardVector() **/
 	UKismetMathLibrary::RandomUnitVector().GetSafeNormal2D() * ImpulseStrength;
 	
 	OwnerPawn->GetShapeComponent()->AddImpulse(MoveLocation, NAME_None, true);

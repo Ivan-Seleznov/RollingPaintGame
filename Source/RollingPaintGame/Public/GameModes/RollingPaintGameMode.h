@@ -7,9 +7,10 @@
 #include "RollingPaintGameMode.generated.h"
 
 class ATargetPawn;
-/**
- * 
- */
+
+DECLARE_MULTICAST_DELEGATE_OneParam(FCleanersCountChanged,/*NewCleanersCount*/int);
+DECLARE_MULTICAST_DELEGATE(FAllTargetsPainted);
+
 UCLASS()
 class ROLLINGPAINTGAME_API ARollingPaintGameMode : public AGameModeBase
 {
@@ -20,13 +21,25 @@ public:
     
 	void OnTargetPaint(const ATargetPawn* TargetPawn);
 	void OnTargetCleaned(const ATargetPawn* TargetPawn);
+
+	FCleanersCountChanged& GetCleanersCountChangedDelegate() {return OnCleanersCountChanged;}
+	FAllTargetsPainted& GetAllTargetsPaintedDelegate() {return OnAllTargetsPainted;}
+
 protected:
 	virtual void BeginPlay() override;
-    
+
+	void ChangeCleanersCount(bool bIncrease);
+	void ChangeCleanTargetsCount(bool bIncrease);
+
 private:
 	int CleanTargetsCount;
 	int CleanersCount;
     	
 	int GetAllCleaners() const;
 	int GetAllCleanTargets() const;
+
+	void SetGameInputMode(bool bEnabled);
+	
+	FCleanersCountChanged OnCleanersCountChanged;
+	FAllTargetsPainted OnAllTargetsPainted;
 };

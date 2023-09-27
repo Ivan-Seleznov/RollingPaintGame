@@ -33,8 +33,8 @@ APlayerPawn::APlayerPawn()
 void APlayerPawn::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
-	ARollingPaintGameMode* GameMode = Cast<ARollingPaintGameMode>(UGameplayStatics::GetGameMode(this));
-	GEngine->AddOnScreenDebugMessage(-1,0,FColor::Green,FString::Printf(TEXT("Cleaners: %d | CleanTargets: %d"),GameMode->GetCleanersCount(),GameMode->GetCleanTargetsCount()));
+	//ARollingPaintGameMode* GameMode = Cast<ARollingPaintGameMode>(UGameplayStatics::GetGameMode(this));
+	//GEngine->AddOnScreenDebugMessage(-1,0,FColor::Green,FString::Printf(TEXT("Cleaners: %d | CleanTargets: %d"),GameMode->GetCleanersCount(),GameMode->GetCleanTargetsCount()));
 }
 
 void APlayerPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
