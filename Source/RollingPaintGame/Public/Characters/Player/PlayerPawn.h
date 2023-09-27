@@ -20,8 +20,11 @@ class ROLLINGPAINTGAME_API APlayerPawn : public ABasePawn
 public:
 	APlayerPawn();
 protected:
+	virtual void Tick(float DeltaSeconds) override;
+	
 	virtual void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override;
 	virtual void OnPawnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit) override;
+
 private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta=(AllowPrivateAccess = "true"))
 	TObjectPtr<USpringArmComponent> SpringArmComponent;

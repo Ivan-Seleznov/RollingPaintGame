@@ -10,20 +10,19 @@
     <list default="true" id="2627f81e-a7c5-4a20-a0d5-917c5aeef623" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RollingPaintGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RollingPaintGame/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/Materials/MI_PawnMaterial.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/Materials/MI_TargetClean.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/Materials/M_PawnMaterial.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/BP_RollingPaintGameModeBase.uasset" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Characters/BP_PlayerPawn.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Characters/BP_PlayerPawn.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Characters/BP_TargetPawn.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Characters/BP_TargetPawn.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Maps/MainLevel.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/MainLevel.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/RollingPaintGame/Private/Characters/Components/PawnSimpleAiComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RollingPaintGame/Private/Characters/Components/PawnAIComponent.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/RollingPaintGame/Private/Characters/Player/Components/RollingSphereComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RollingPaintGame/Private/Characters/Player/Components/RollingSphereComponent.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/RollingPaintGame/Private/Characters/CleanerPawn.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RollingPaintGame/Private/Characters/CleanerPawn.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/RollingPaintGame/Private/Characters/Player/Components/RollingSphereComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RollingPaintGame/Private/Characters/Components/RollingSphereComponent.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/RollingPaintGame/Private/Characters/Player/PlayerPawn.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RollingPaintGame/Private/Characters/Player/PlayerPawn.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/RollingPaintGame/Private/Characters/TargetPawn.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RollingPaintGame/Private/Characters/TargetPawn.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/RollingPaintGame/Private/GameModes/RollingPaintGameGameModeBase.cpp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/RollingPaintGame/Public/Characters/BasePawn.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RollingPaintGame/Public/Characters/BasePawn.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/RollingPaintGame/Public/Characters/Components/PawnSimpleAiComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RollingPaintGame/Public/Characters/Components/PawnAIComponent.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/RollingPaintGame/Public/Characters/Player/Components/RollingSphereComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RollingPaintGame/Public/Characters/Player/Components/RollingSphereComponent.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/RollingPaintGame/Public/Characters/Player/Components/RollingSphereComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RollingPaintGame/Public/Characters/Components/RollingSphereComponent.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/RollingPaintGame/Public/Characters/Player/PlayerPawn.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RollingPaintGame/Public/Characters/Player/PlayerPawn.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/RollingPaintGame/Public/Characters/TargetPawn.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RollingPaintGame/Public/Characters/TargetPawn.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/RollingPaintGame/Public/GameModes/RollingPaintGameGameModeBase.h" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +75,8 @@
     <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/RollingPaintGame/Private/Characters/Components/PawnAIComponent.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/RollingPaintGame/Public/Characters/Components/PawnAIComponent.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../SimpleShooter/Source/SimpleShooter/SimpleShooter.Build.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
@@ -226,7 +227,7 @@
       <workItem from="1695673305846" duration="64000" />
       <workItem from="1695673482477" duration="14000" />
       <workItem from="1695673562687" duration="313000" />
-      <workItem from="1695674140059" duration="36055000" />
+      <workItem from="1695674140059" duration="47014000" />
     </task>
     <servers />
   </component>

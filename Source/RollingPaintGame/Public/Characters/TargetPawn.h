@@ -19,12 +19,18 @@ public:
 	
 	ETargetState GetTargetState() const {return  TargetState;}
 	void SetTargetState(ETargetState NewState);
-	
+
+	void PaintTarget(FColor NewColor, ETargetState NewTargetState);
 protected:
 	virtual void OnPawnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit) override;
 
-	UPROPERTY(EditAnywhere,BlueprintReadWrite) TEnumAsByte<ETargetState> TargetState;
+	UPROPERTY(EditAnywhere,BlueprintReadWrite,Transient) TEnumAsByte<ETargetState> TargetState;
+
+	UPROPERTY(EditDefaultsOnly,Category="Sound")
+	USoundBase* PaintingSound;
 	
+	void Painted();
+	void Cleaned();
 private:
 	UPROPERTY(EditDefaultsOnly,Category="Components")
 	TObjectPtr<UPawnAIComponent> SimpleAiComponent;

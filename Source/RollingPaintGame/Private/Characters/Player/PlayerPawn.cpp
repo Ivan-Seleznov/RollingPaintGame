@@ -5,10 +5,12 @@
 
 #include "EnhancedInputComponent.h"
 #include "Camera/CameraComponent.h"
-#include "..\..\..\Public\Characters\TargetPawn.h"
-#include "Characters/Player/Components/RollingSphereComponent.h"
+#include "Characters/TargetPawn.h"
+#include "Characters/Components/RollingSphereComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "GameFramework/SpringArmComponent.h"
+#include "GameModes/RollingPaintGameMode.h"
+#include "Kismet/GameplayStatics.h"
 
 APlayerPawn::APlayerPawn()
 {
@@ -16,7 +18,7 @@ APlayerPawn::APlayerPawn()
 	RootComponent = ShapeComponent;
 	
 	PawnMesh->SetupAttachment(RootComponent);
-	
+		
 	SpringArmComponent = CreateDefaultSubobject<USpringArmComponent>("SpringArm");
 	SpringArmComponent->SetupAttachment(RootComponent);
 
@@ -24,6 +26,15 @@ APlayerPawn::APlayerPawn()
 	CameraComponent->SetupAttachment(SpringArmComponent);
 	
 	RollingSphereComponent = CreateDefaultSubobject<URollingSphereComponent>("RollingSphereComponent");
+
+	PrimaryActorTick.bCanEverTick = true;
+}
+
+void APlayerPawn::Tick(float DeltaSeconds)
+{
+	Super::Tick(DeltaSeconds);
+	ARollingPaintGameMode* GameMode = Cast<ARollingPaintGameMode>(UGameplayStatics::GetGameMode(this));
+	GEngine->AddOnScreenDebugMessage(-1,0,FColor::Green,FString::Printf(TEXT("Cleaners: %d | CleanTargets: %d"),GameMode->GetCleanersCount(),GameMode->GetCleanTargetsCount()));
 }
 
 void APlayerPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
@@ -46,7 +57,6 @@ void APlayerPawn::OnPawnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UP
 
 	if (TargetPawn->GetTargetState() == ESTATE_Clean)
 	{
-		TargetPawn->SetMeshDynamicMaterialColor(CurrentPawnColor);
-		TargetPawn->SetTargetState(ESTATE_Dirty);
+		TargetPawn->PaintTarget(CurrentPawnColor,ESTATE_Dirty);
 	}
 }

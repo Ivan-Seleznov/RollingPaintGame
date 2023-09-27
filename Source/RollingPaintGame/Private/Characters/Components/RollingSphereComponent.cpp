@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "Characters/Player/Components/RollingSphereComponent.h"
+#include "Characters/Components/RollingSphereComponent.h"
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "Characters/BasePawn.h"
@@ -51,17 +51,10 @@ void URollingSphereComponent::Move(const FInputActionValue& Value)
 	const FRotator Rotation = Pawn->Controller->GetControlRotation();
 	const FRotator YawRotation(0, Rotation.Yaw, 0);
 
-	const FVector ForwardDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
-	const FVector RightDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
+	FVector ForwardDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
+	FVector RightDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
 
-		
-	if (MovementVector.X != 0.0f)
-	{
-		Pawn->GetShapeComponent()->AddForce(RightDirection * RollingSphereMovementSpeed * MovementVector.X, NAME_None,true);
-	}
-	
-	if (MovementVector.Y != 0.0f)
-	{
-		Pawn->GetShapeComponent()->AddForce(ForwardDirection * RollingSphereMovementSpeed * MovementVector.Y, NAME_None,true);
-	}
+	Pawn->GetShapeComponent()->AddForce(ForwardDirection * RollingSphereMovementSpeed * MovementVector.Y, NAME_None,true);
+	Pawn->GetShapeComponent()->AddForce(RightDirection * RollingSphereMovementSpeed * MovementVector.X, NAME_None,true);
+
 }

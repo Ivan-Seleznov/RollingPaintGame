@@ -29,5 +29,5 @@ protected:
 	void Move(const FInputActionValue& Value);
 
 	UPROPERTY(EditDefaultsOnly,Category="Movement")
-	float RollingSphereMovementSpeed = 600.f;
+	float RollingSphereMovementSpeed = 530.f;
 };

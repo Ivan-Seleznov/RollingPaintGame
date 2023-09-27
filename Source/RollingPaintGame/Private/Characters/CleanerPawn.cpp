@@ -11,8 +11,8 @@ void ACleanerPawn::OnPawnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, U
 	
 	if (OtherTargetPawn->GetTargetState() == ESTATE_Dirty && TargetState == ESTATE_Clean)
 	{
-		OtherTargetPawn->SetMeshDynamicMaterialColor(OtherTargetPawn->GetDefaultPawnColor());
-		OtherTargetPawn->SetTargetState(ESTATE_Clean);
+		OtherTargetPawn->PaintTarget(OtherTargetPawn->GetDefaultPawnColor(),ESTATE_Clean);
+		return;
 	}
 	Super::OnPawnHit(HitComp, OtherActor, OtherComp, NormalImpulse, Hit);
 }

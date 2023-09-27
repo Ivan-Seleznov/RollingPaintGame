@@ -31,7 +31,6 @@ public:
 	void SetPawnColor(FColor NewColor);
 	virtual void PostInitializeComponents() override;
 
-	void SetMeshDynamicMaterialColor(FColor NewColor);
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -48,10 +47,12 @@ protected:
 	UPROPERTY(EditDefaultsOnly,BlueprintReadOnly)
 	UMaterialInstance* MeshMaterial;
 	
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly,meta=(AllowPrivateAccess="true"))
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly,meta=(AllowPrivateAccess="true"),Transient)
 	FColor CurrentPawnColor;
+
+	virtual void SetMeshDynamicMaterialColor(FColor NewColor);
 private:
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly,meta=(AllowPrivateAccess="true"),Category="Color")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly,meta=(AllowPrivateAccess="true"),Category="Color",Transient)
 	FColor DefaultPawnColor;
 	
 	UPROPERTY()
