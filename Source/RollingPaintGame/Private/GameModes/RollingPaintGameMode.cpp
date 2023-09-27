@@ -21,7 +21,7 @@ void ARollingPaintGameMode::OnTargetCleaned(const ATargetPawn* TargetPawn)
 	ChangeCleanTargetsCount(true);
 	if (Cast<ACleanerPawn>(TargetPawn))
 	{
-		ChangeCleanTargetsCount(true);
+		ChangeCleanersCount(true);
 	}
 }
 
