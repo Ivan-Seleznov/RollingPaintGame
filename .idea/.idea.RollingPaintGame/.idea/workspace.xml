@@ -7,12 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2627f81e-a7c5-4a20-a0d5-917c5aeef623" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Content/Maps/MainLevel.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/MainLevel.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/RollingPaintGame/Private/Characters/Player/PlayerPawn.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RollingPaintGame/Private/Characters/Player/PlayerPawn.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/RollingPaintGame/Public/Characters/BasePawn.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RollingPaintGame/Public/Characters/BasePawn.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/RollingPaintGame/Public/Characters/Player/PlayerPawn.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RollingPaintGame/Public/Characters/Player/PlayerPawn.h" afterDir="false" />
-    </list>
+    <list default="true" id="2627f81e-a7c5-4a20-a0d5-917c5aeef623" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -248,7 +243,7 @@
       <workItem from="1695673305846" duration="64000" />
       <workItem from="1695673482477" duration="14000" />
       <workItem from="1695673562687" duration="313000" />
-      <workItem from="1695674140059" duration="55285000" />
+      <workItem from="1695674140059" duration="56802000" />
     </task>
     <servers />
   </component>
