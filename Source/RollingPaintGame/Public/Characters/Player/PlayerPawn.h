@@ -34,4 +34,8 @@ private:
 	
 	UPROPERTY(VisibleAnywhere,BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
 	TObjectPtr<URollingSphereComponent> RollingSphereComponent;
+
+		
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "VFX", meta = (AllowPrivateAccess = true))
+	UParticleSystem* PaintEffect;
 };

@@ -30,7 +30,7 @@ void ARollingPaintGameMode::BeginPlay()
 	Super::BeginPlay();
 
 	CleanersCount = GetAllCleaners();
-d	OnCleanersCountChanged.Broadcast(CleanersCount);
+	OnCleanersCountChanged.Broadcast(CleanersCount);
 	CleanTargetsCount = GetAllCleanTargets();
 
 	SetGameInputMode(true);

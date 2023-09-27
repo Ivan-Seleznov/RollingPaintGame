@@ -9,7 +9,6 @@
 #include "Characters/Components/RollingSphereComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "GameFramework/SpringArmComponent.h"
-#include "GameModes/RollingPaintGameMode.h"
 #include "Kismet/GameplayStatics.h"
 
 APlayerPawn::APlayerPawn()
@@ -58,5 +57,10 @@ void APlayerPawn::OnPawnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UP
 	if (TargetPawn->GetTargetState() == ESTATE_Clean)
 	{
 		TargetPawn->PaintTarget(CurrentPawnColor,ESTATE_Dirty);
+		
+		if (PaintEffect)
+		{
+			UGameplayStatics::SpawnEmitterAtLocation(this,PaintEffect,GetActorLocation(),GetActorRotation());
+		}
 	}
 }

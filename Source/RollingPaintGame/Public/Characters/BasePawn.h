@@ -57,5 +57,5 @@ private:
 	
 	UPROPERTY()
 	UMaterialInstanceDynamic* MeshDynamicMaterial;
-	
+
 };
