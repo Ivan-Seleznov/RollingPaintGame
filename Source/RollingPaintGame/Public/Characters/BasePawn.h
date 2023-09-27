@@ -27,8 +27,7 @@ public:
 	FColor GetCurrentPawnColor() const {return CurrentPawnColor;}
 
 	void SetDefaultPawnColor(FColor NewColor) {DefaultPawnColor = NewColor;}
-	
-	void SetPawnColor(FColor NewColor);
+
 	virtual void PostInitializeComponents() override;
 
 protected:

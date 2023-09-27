@@ -10,11 +10,6 @@ ABasePawn::ABasePawn()
 {
 	PawnMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("PawnMeshComponent"));
 }
-
-void ABasePawn::SetPawnColor(FColor NewColor)
-{
-}
-
 void ABasePawn::PostInitializeComponents()
 {
 	Super::PostInitializeComponents();
@@ -24,7 +19,6 @@ void ABasePawn::PostInitializeComponents()
 	PawnMesh->SetMaterial(0,MeshDynamicMaterial);
 }
 
-// Called when the game starts or when spawned
 void ABasePawn::BeginPlay()
 {
 	Super::BeginPlay();

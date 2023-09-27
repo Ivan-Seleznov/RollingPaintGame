@@ -7,7 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2627f81e-a7c5-4a20-a0d5-917c5aeef623" name="Changes" comment="" />
+    <list default="true" id="2627f81e-a7c5-4a20-a0d5-917c5aeef623" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RollingPaintGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RollingPaintGame/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -244,6 +246,7 @@
       <workItem from="1695673482477" duration="14000" />
       <workItem from="1695673562687" duration="313000" />
       <workItem from="1695674140059" duration="56802000" />
+      <workItem from="1695824580132" duration="1384000" />
     </task>
     <servers />
   </component>
